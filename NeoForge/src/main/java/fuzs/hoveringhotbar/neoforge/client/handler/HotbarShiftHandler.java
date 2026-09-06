@@ -33,13 +33,13 @@ public class HotbarShiftHandler {
                 isOffsetApplied = true;
                 event.getGuiGraphics()
                         .pose()
-                        .translate(0.0F, -HoveringHotbar.CONFIG.get(ClientConfig.class).hotbarOffset, 0.0F);
+                        .translate(0.0F, -HoveringHotbar.CONFIG.get(ClientConfig.class).getHotbarOffset(), 0.0F);
             }
         } else if (isOffsetApplied) {
             isOffsetApplied = false;
             event.getGuiGraphics()
                     .pose()
-                    .translate(0.0F, HoveringHotbar.CONFIG.get(ClientConfig.class).hotbarOffset, 0.0F);
+                    .translate(0.0F, HoveringHotbar.CONFIG.get(ClientConfig.class).getHotbarOffset(), 0.0F);
         }
     }
 

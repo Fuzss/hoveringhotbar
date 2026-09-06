@@ -16,7 +16,7 @@ abstract class ChatComponentMixin {
                            slice = @Slice(to = @At(value = "INVOKE",
                                                    target = "Lnet/minecraft/client/Options;chatOpacity()Lnet/minecraft/client/OptionInstance;")))
     private int render(int bottomMargin) {
-        return bottomMargin + HoveringHotbar.CONFIG.get(ClientConfig.class).hotbarOffset;
+        return bottomMargin + HoveringHotbar.CONFIG.get(ClientConfig.class).getHotbarOffset();
 
     }
 }

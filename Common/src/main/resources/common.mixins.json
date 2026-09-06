@@ -6,6 +6,7 @@
   "mixins": [
   ],
   "client": [
+    "client.ChatComponentMixin",
     "client.GuiMixin"
   ],
   "injectors": {

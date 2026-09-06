@@ -19,7 +19,7 @@ public class HoveringHotbarNeoForgeClient {
     }
 
     private static void registerEventHandlers(IEventBus eventBus) {
-        // try to not push a pose on the stack when the event is cancelled
+        // try to not push a pose on the stack when the event is canceled
         eventBus.addListener(EventPriority.LOW, HotbarShiftHandler::onBeforeRenderGui);
         eventBus.addListener(HotbarShiftHandler::onAfterRenderGui);
         eventBus.addListener(HotbarShiftHandler::onBeforeRenderGuiLayer);

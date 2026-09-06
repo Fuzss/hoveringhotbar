@@ -24,9 +24,8 @@ public class HoveringHotbarNeoForgeClient {
     }
 
     private static void registerLoadingHandlers(IEventBus eventBus) {
-        // our gui layer system does not support modded layers, so use the native event here
+        // Our gui layer system does not support modded layers, so use the native event here.
         eventBus.addListener((final RegisterGuiLayersEvent event) -> {
-            // our gui layer system does not support modded layers, so use the native event here
             for (Identifier identifier : HoveringHotbar.CONFIG.get(ClientConfig.class).hotbarGuiLayers) {
                 try {
                     event.wrapLayer(identifier, (GuiLayer guiLayer) -> {

@@ -21,7 +21,7 @@ public class HoveringHotbarFabricClient implements ClientModInitializer {
 
     private static void registerEventHandlers() {
         ClientLifecycleEvents.STARTED.register((Minecraft minecraft) -> {
-            // our gui layer system does not support modded layers, so use the native event here
+            // Our gui layer system does not support modded layers, so use the native event here.
             for (Identifier identifier : HoveringHotbar.CONFIG.get(ClientConfig.class).hotbarGuiLayers) {
                 try {
                     HudElementRegistry.replaceElement(identifier, (HudElement hudElement) -> {
